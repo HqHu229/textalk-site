@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda — Textalk</title>
+<meta name="description" content="Waar en wanneer je Textalk live kunt meemaken: shows, meetups, pop-ups en community-momenten in Tilburg en omstreken.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><rect x='6' y='30' width='88' height='40' rx='20' fill='none' stroke='black' stroke-width='6'/></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#000;--paper:#fff;--lila:#E5ABFF;--blauw:#39AEFF;--koraal:#FF928F;--groen:#18C674;--geel:#FDED79;--grey-text:#595959;
+    --accent:var(--lila);--ease:cubic-bezier(.8,0,.18,1);
+    --font-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;--font-serif:"Instrument Serif",Georgia,serif;}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-sans);color:var(--ink);background:var(--paper);font-size:1.0625rem;line-height:1.55}
+  .display{font-size:clamp(2.5rem,7vw,5.5rem);line-height:.92;letter-spacing:-.02em;font-weight:700}
+  .h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.1;font-weight:700}
+  .h3{font-size:clamp(1.125rem,2vw,1.375rem);line-height:1.2;font-weight:700}
+  .meta{font-size:.875rem;line-height:1.4}
+  .serif{font-family:var(--font-serif)}.serif-quote{font-family:var(--font-serif);font-style:italic}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:14px 28px;font-weight:600;font-size:1rem;transition:transform .15s var(--ease),background .15s var(--ease),color .15s var(--ease);cursor:pointer;border:1.5px solid var(--ink);line-height:1;text-decoration:none}
+  .btn-primary{background:var(--ink);color:var(--paper)}.btn-primary:hover{transform:scale(1.03)}
+  .btn-secondary{background:transparent;color:var(--ink)}.btn-secondary:hover{background:var(--ink);color:var(--paper)}
+  .arr{display:inline-block;transition:transform .15s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .logo-pill{display:inline-flex;align-items:baseline;border:2.5px solid currentColor;border-radius:999px;padding:.28em .7em;line-height:1;text-decoration:none}
+  .logo-tex{font-weight:800;letter-spacing:-.02em}.logo-talk{font-family:var(--font-serif);font-weight:400}
+  .tag{display:inline-flex;align-items:center;border-radius:999px;border:1.5px solid var(--ink);padding:6px 14px;font-weight:500;font-size:.85rem;line-height:1}
+  .navlink{font-weight:500}.navlink:hover{opacity:.6}
+  .hairline{border-top:1px solid var(--ink)}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .3s var(--ease),transform .3s var(--ease)}.reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn,.arr{transition:none}html{scroll-behavior:auto}}
+  .ev{display:grid;gap:1rem;padding:1.75rem 0;border-top:1px solid var(--ink);align-items:start}
+  @media(min-width:768px){.ev{grid-template-columns:170px 1fr auto;gap:2rem;align-items:center}}
+  .ev .date{font-weight:700;font-size:clamp(1.05rem,1.6vw,1.25rem);letter-spacing:-.01em}
+  .demo-badge{position:fixed;bottom:16px;left:16px;z-index:60;background:var(--ink);color:var(--paper);border-radius:999px;padding:8px 16px;font-size:.8rem;font-weight:600;opacity:.85}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="assets/cms-config.js"></script>
+<script src="assets/cms.js"></script>
+</head>
+<body>
+
+<header class="sticky top-0 z-50 bg-white" style="border-bottom:1px solid var(--ink)">
+  <div class="mx-auto flex items-center justify-between px-5 md:px-10" style="max-width:1280px;height:72px">
+    <a href="index.html" class="logo-pill text-xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></a>
+    <nav class="hidden xl:flex items-center gap-6">
+      <a class="navlink" href="textalk-project-tilburg-weeft-verder.html">Tilburg Weeft Verder</a>
+      <a class="navlink" href="textalk-talkshows-overzicht.html">Talkshows</a>
+      <a class="navlink" href="textalk-expert-profiel.html">Experts</a>
+      <a class="navlink" href="nieuws.html">Nieuws</a>
+      <a class="navlink" href="over.html">Over ons</a>
+      <a class="navlink" href="partners.html">Partners</a>
+      <a class="btn btn-primary" style="border-bottom:2px solid var(--ink)" href="agenda.html">Kom langs</a>
+    </nav>
+    <a class="btn btn-primary xl:hidden" href="agenda.html">Kom langs</a>
+  </div>
+</header>
+
+<main>
+<section class="mx-auto px-5 py-14 md:px-10 md:py-20 reveal" style="max-width:1280px">
+  <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Wat speelt er nu</p>
+  <h1 class="display mt-2">Waar kun je ons<br>live meemaken?</h1>
+  <p class="mt-6 max-w-2xl text-lg">Textalk leeft op het podium en in de stad. Hieronder alles wat eraan komt — shows, meetups, pop-ups en community-momenten. Reserveer je plek of loop gewoon binnen.</p>
+</section>
+
+<section class="hairline bg-white">
+  <div class="mx-auto px-5 pb-16 md:px-10" style="max-width:1000px">
+    <div id="agendaList"></div>
+    <p id="agendaEmpty" class="hidden py-16 text-center text-lg" style="color:var(--grey-text)">Nog geen nieuwe datums. Meld je aan voor de nieuwsbrief en je hoort het als eerste.</p>
+    <div class="mt-12 flex flex-wrap gap-3 border-t pt-10" style="border-color:var(--ink)">
+      <a class="btn btn-primary" href="index.html#nieuwsbrief">Houd me op de hoogte <span class="arr">→</span></a>
+      <a class="btn btn-secondary" href="textalk-talkshows-overzicht.html">Bekijk eerdere shows</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-14 md:px-10" style="max-width:1280px">
+    <div class="flex flex-wrap items-baseline gap-4"><span class="logo-pill text-2xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></span><span class="serif-quote text-lg">de kledingindustrie als lens op de wereld</span></div>
+    <div class="mt-12 flex flex-wrap items-center justify-between gap-4 pt-6" style="border-top:1px solid rgba(255,255,255,.2)">
+      <p class="serif-quote text-lg">Onze redactie bepaalt de inhoud — nooit onze financiers.</p>
+      <p class="meta">Stichting Textalk · Tilburg · hallo@textalk.nl</p>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-badge">Agenda · placeholderinhoud</div>
+
+<script>
+const TYPE_ACCENT={'Live show':'var(--lila)','Meetup':'var(--blauw)','Pop-up':'var(--koraal)','Community':'var(--groen)'};
+function fmtDate(d){const dt=new Date(d);if(isNaN(dt))return TextalkCMS.esc(d||'');return dt.toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});}
+function eventRow(e){
+  const esc=TextalkCMS.esc,acc=TYPE_ACCENT[e.type]||'var(--lila)';
+  return `<div class="ev reveal">
+    <div><span class="date">${fmtDate(e.datum)}</span></div>
+    <div>
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="tag" style="border-width:1px;background:${acc}">${esc(e.type||'Event')}</span>
+        ${e.locatie?`<span class="meta font-semibold" style="color:var(--grey-text)">${esc(e.locatie)}</span>`:''}
+      </div>
+      <h2 class="h3 mt-3" style="font-size:clamp(1.2rem,2.4vw,1.6rem)">${esc(e.title)}</h2>
+      ${e.omschrijving?`<p class="mt-2" style="color:var(--grey-text)">${esc(e.omschrijving)}</p>`:''}
+    </div>
+    <div>${e.link?`<a class="btn btn-primary" href="${esc(e.link)}">Aanmelden <span class="arr">→</span></a>`:`<span class="meta font-semibold" style="color:var(--grey-text)">Datum volgt</span>`}</div>
+  </div>`;
+}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(async function(){
+  const list=document.getElementById('agendaList');
+  try{
+    let items=await TextalkCMS.list('agenda');
+    items=items.filter(Boolean).sort((a,b)=>new Date(a.datum)-new Date(b.datum));
+    if(!items.length){document.getElementById('agendaEmpty').classList.remove('hidden');return;}
+    list.innerHTML=items.map(eventRow).join('');
+    list.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  }catch(e){document.getElementById('agendaEmpty').classList.remove('hidden');console.warn('agenda',e.message);}
+})();
+</script>
+</body>
+</html>

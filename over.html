@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Over ons — Textalk</title>
+<meta name="description" content="Wie zit er achter Textalk? Ons verhaal, onze missie en visie, hoe we werken (de lens), en de mensen die het platform dragen.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><rect x='6' y='30' width='88' height='40' rx='20' fill='none' stroke='black' stroke-width='6'/></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#000;--paper:#fff;--lila:#E5ABFF;--blauw:#39AEFF;--koraal:#FF928F;--groen:#18C674;--geel:#FDED79;--grey-text:#595959;
+    --ease:cubic-bezier(.8,0,.18,1);
+    --font-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;--font-serif:"Instrument Serif",Georgia,serif;}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-sans);color:var(--ink);background:var(--paper);font-size:1.0625rem;line-height:1.55}
+  .display{font-size:clamp(2.4rem,6.5vw,5rem);line-height:.94;letter-spacing:-.02em;font-weight:700}
+  .h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.1;font-weight:700}
+  .h3{font-size:clamp(1.125rem,2vw,1.375rem);line-height:1.2;font-weight:700}
+  .meta{font-size:.875rem;line-height:1.4}
+  .serif{font-family:var(--font-serif)}.serif-quote{font-family:var(--font-serif);font-style:italic}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:14px 28px;font-weight:600;font-size:1rem;transition:transform .15s var(--ease),background .15s var(--ease),color .15s var(--ease);cursor:pointer;border:1.5px solid var(--ink);line-height:1;text-decoration:none}
+  .btn-primary{background:var(--ink);color:var(--paper)}.btn-primary:hover{transform:scale(1.03)}
+  .btn-secondary{background:transparent;color:var(--ink)}.btn-secondary:hover{background:var(--ink);color:var(--paper)}
+  .btn-invert{background:var(--paper);color:var(--ink);border-color:var(--paper)}.btn-invert:hover{transform:scale(1.03)}
+  .arr{display:inline-block;transition:transform .15s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .logo-pill{display:inline-flex;align-items:baseline;border:2.5px solid currentColor;border-radius:999px;padding:.28em .7em;line-height:1;text-decoration:none}
+  .logo-tex{font-weight:800;letter-spacing:-.02em}.logo-talk{font-family:var(--font-serif);font-weight:400}
+  .tag{display:inline-flex;align-items:center;border-radius:999px;border:1.5px solid var(--ink);padding:6px 14px;font-weight:500;font-size:.875rem;line-height:1}
+  .navlink{font-weight:500}.navlink:hover{opacity:.6}
+  .hairline{border-top:1px solid var(--ink)}
+  .ph-people{position:absolute;inset:0;background:radial-gradient(circle at 50% 38%, rgba(0,0,0,.16) 0 22%, transparent 23%),linear-gradient(0deg,rgba(0,0,0,.1),rgba(0,0,0,.1))}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .3s var(--ease),transform .3s var(--ease)}.reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn,.arr{transition:none}html{scroll-behavior:auto}}
+  .tagword{display:inline-block;font-family:var(--font-serif);font-style:italic;font-size:1.4rem;margin-bottom:6px}
+  .demo-badge{position:fixed;bottom:16px;left:16px;z-index:60;background:var(--ink);color:var(--paper);border-radius:999px;padding:8px 16px;font-size:.8rem;font-weight:600;opacity:.85}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="assets/cms-config.js"></script>
+<script src="assets/cms.js"></script>
+</head>
+<body>
+
+<header class="sticky top-0 z-50 bg-white" style="border-bottom:1px solid var(--ink)">
+  <div class="mx-auto flex items-center justify-between px-5 md:px-10" style="max-width:1280px;height:72px">
+    <a href="index.html" class="logo-pill text-xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></a>
+    <nav class="hidden xl:flex items-center gap-6">
+      <a class="navlink" href="textalk-project-tilburg-weeft-verder.html">Tilburg Weeft Verder</a>
+      <a class="navlink" href="textalk-talkshows-overzicht.html">Talkshows</a>
+      <a class="navlink" href="textalk-expert-profiel.html">Experts</a>
+      <a class="navlink" href="nieuws.html">Nieuws</a>
+      <a class="navlink" style="border-bottom:2px solid var(--ink);padding-bottom:2px" href="over.html">Over ons</a>
+      <a class="navlink" href="partners.html">Partners</a>
+      <a class="btn btn-primary" href="agenda.html">Kom langs</a>
+    </nav>
+    <a class="btn btn-primary xl:hidden" href="agenda.html">Kom langs</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="mx-auto px-5 py-14 md:px-10 md:py-20 reveal" style="max-width:1280px">
+  <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Over ons</p>
+  <h1 class="display mt-2">Wie zit er achter<br>Textalk?</h1>
+  <p class="mt-6 max-w-2xl text-lg">Een frisse club makers, journalisten en gastvrouwen/-heren uit Tilburg. We pluizen de kledingindustrie uit en gebruiken wat we vinden als lens op de samenleving — op het podium, in de stad en online. Wat begon met één T-shirt werd een platform, een dialoog en een beweging.</p>
+</section>
+
+<!-- MISSIE / VISIE -->
+<section class="hairline bg-white">
+  <div class="mx-auto grid gap-10 px-5 py-16 md:grid-cols-2 md:px-10 md:py-20" style="max-width:1280px">
+    <div class="reveal">
+      <p class="tagword">visie</p>
+      <h2 class="h2">Een verantwoorde kledingkast voor iedereen</h2>
+      <p class="mt-4 text-lg" style="color:var(--grey-text)">We zien een wereld waarin wat je draagt niemand uitbuit en de planeet niet uitput. Ver weg, maar niet onmogelijk — als we snappen hoe het systeem werkt.</p>
+    </div>
+    <div class="reveal">
+      <p class="tagword">missie</p>
+      <h2 class="h2">De industrie begrijpelijk maken — en het gesprek op gang brengen</h2>
+      <p class="mt-4 text-lg" style="color:var(--grey-text)">We maken de complexe kledingketen navolgbaar, zonder preek en zonder jargon, en brengen mensen samen om er iets mee te doen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- METHODE: DE LENS (drie lagen) -->
+<section class="hairline bg-white">
+  <div class="mx-auto px-5 py-16 md:px-10 md:py-20" style="max-width:1280px">
+    <div class="reveal max-w-2xl">
+      <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Hoe we werken</p>
+      <h2 class="h2 mt-1">De vraag opent, het onderzoek volgt, het antwoord sluit</h2>
+      <p class="mt-4 text-lg" style="color:var(--grey-text)">Elke show en elk project begint met een vraag — en die vraag laten we niet in de lucht hangen. We zoeken het uit met hoor en wederhoor, en elke claim is te herleiden naar een bron.</p>
+    </div>
+    <div class="mt-12 grid gap-8 md:grid-cols-3 md:gap-10">
+      <div class="reveal"><span class="tagword">tex</span><h3 class="h3">Activeren</h3><p class="mt-2" style="color:var(--grey-text)">We maken het urgent en toegankelijk. Direct, bevlogen, en we halen je van de bank.</p></div>
+      <div class="reveal"><span class="tagword">talk</span><h3 class="h3">Onderzoeken</h3><p class="mt-2" style="color:var(--grey-text)">Precies en zorgvuldig. Nuance boven scoren, integriteit als randvoorwaarde.</p></div>
+      <div class="reveal"><span class="tagword">de&nbsp;lens</span><h3 class="h3">Samenkomen</h3><p class="mt-2" style="color:var(--grey-text)">Een plek en een beweging. Live in de stad en online — waar het gesprek doorloopt.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM (CMS mensen) -->
+<section class="hairline" style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-16 md:px-10 md:py-20 reveal" style="max-width:1280px">
+    <div class="mb-8"><p class="meta font-semibold uppercase tracking-wide text-white/60">De gezichten van Textalk</p><h2 class="h2 mt-1">Team, bestuur & ambassadeurs</h2></div>
+    <div id="team" class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"></div>
+    <p class="mt-8 max-w-2xl text-white/80">Textalk is een initiatief van <b>Stichting Textalk</b> (culturele ANBI). Bestuur, jaarverslag en beleidsplan volgen hier. Studenten en jong talent werken mee aan redactie en productie.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="hairline" style="background:var(--geel)">
+  <div class="mx-auto px-5 py-16 text-center md:px-10 md:py-20 reveal" style="max-width:760px">
+    <h2 class="h2">Meedoen of iets vragen?</h2>
+    <p class="mt-3">Als maker, expert, student, partner of gewoon nieuwsgierig — we horen graag van je.</p>
+    <div class="mt-7 flex flex-wrap justify-center gap-3">
+      <a class="btn btn-primary" href="mailto:hallo@textalk.nl">Mail ons <span class="arr">→</span></a>
+      <a class="btn btn-secondary" href="agenda.html">Kom langs</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-14 md:px-10" style="max-width:1280px">
+    <div class="flex flex-wrap items-baseline gap-4"><span class="logo-pill text-2xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></span><span class="serif-quote text-lg">de kledingindustrie als lens op de wereld</span></div>
+    <div class="mt-12 flex flex-wrap items-center justify-between gap-4 pt-6" style="border-top:1px solid rgba(255,255,255,.2)">
+      <p class="serif-quote text-lg">Onze redactie bepaalt de inhoud — nooit onze financiers.</p>
+      <p class="meta">Stichting Textalk · Tilburg · hallo@textalk.nl</p>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-badge">Over ons · placeholderinhoud</div>
+
+<script>
+function personCard(p){const esc=TextalkCMS.esc;const kleur=p.kleur||'var(--lila)';
+  return `<div><div class="media relative overflow-hidden" style="aspect-ratio:4/5;background:${esc(kleur)};border:1px solid rgba(255,255,255,.25)">${p.portret?`<img src="${esc(p.portret)}" alt="${esc(p.naam)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">`:'<div class="ph-people"></div>'}</div>
+  <p class="font-semibold text-white leading-tight mt-3">${esc(p.naam)}</p><p class="meta text-white/60">${esc(p.rol||'')}</p></div>`;}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(async function(){
+  const el=document.getElementById('team');
+  const FALL=[{naam:'Haiko Huvenaars',rol:'Oprichter & host',kleur:'var(--lila)'},{naam:'[Naam maker]',rol:'Maker & redactie',kleur:'var(--groen)'},{naam:'[Naam bestuurslid]',rol:'Bestuur',kleur:'var(--blauw)'},{naam:'[Ambassadeur]',rol:'Draagt Textalk uit',kleur:'var(--geel)'},{naam:'[Student]',rol:'Redactie · Fontys',kleur:'var(--koraal)'}];
+  try{let items=await TextalkCMS.list('mensen');if(!items||!items.length)items=FALL;el.innerHTML=items.map(personCard).join('');}
+  catch(e){el.innerHTML=FALL.map(personCard).join('');}
+})();
+</script>
+</body>
+</html>

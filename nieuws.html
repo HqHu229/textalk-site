@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nieuws & blog — Textalk</title>
+<meta name="description" content="Wat er speelt in de kledingindustrie: analyses, onderzoeksupdates en verhalen achter de schermen, geschreven door de redactie van Textalk.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><rect x='6' y='30' width='88' height='40' rx='20' fill='none' stroke='black' stroke-width='6'/></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#000;--paper:#fff;--lila:#E5ABFF;--blauw:#39AEFF;--koraal:#FF928F;--groen:#18C674;--geel:#FDED79;--grey-text:#595959;
+    --ease:cubic-bezier(.8,0,.18,1);
+    --font-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;--font-serif:"Instrument Serif",Georgia,serif;}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-sans);color:var(--ink);background:var(--paper);font-size:1.0625rem;line-height:1.55}
+  .display{font-size:clamp(2.4rem,6.5vw,5rem);line-height:.94;letter-spacing:-.02em;font-weight:700}
+  .h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.1;font-weight:700}
+  .h3{font-size:clamp(1.125rem,2vw,1.375rem);line-height:1.2;font-weight:700}
+  .meta{font-size:.875rem;line-height:1.4}
+  .serif{font-family:var(--font-serif)}.serif-quote{font-family:var(--font-serif);font-style:italic}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:14px 28px;font-weight:600;font-size:1rem;transition:transform .15s var(--ease),background .15s var(--ease),color .15s var(--ease);cursor:pointer;border:1.5px solid var(--ink);line-height:1;text-decoration:none}
+  .btn-primary{background:var(--ink);color:var(--paper)}.btn-primary:hover{transform:scale(1.03)}
+  .btn-secondary{background:transparent;color:var(--ink)}.btn-secondary:hover{background:var(--ink);color:var(--paper)}
+  .arr{display:inline-block;transition:transform .15s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .logo-pill{display:inline-flex;align-items:baseline;border:2.5px solid currentColor;border-radius:999px;padding:.28em .7em;line-height:1;text-decoration:none}
+  .logo-tex{font-weight:800;letter-spacing:-.02em}.logo-talk{font-family:var(--font-serif);font-weight:400}
+  .tag{display:inline-flex;align-items:center;border-radius:999px;border:1.5px solid var(--ink);padding:5px 13px;font-weight:600;font-size:.78rem;line-height:1}
+  .navlink{font-weight:500}.navlink:hover{opacity:.6}
+  .hairline{border-top:1px solid var(--ink)}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .3s var(--ease),transform .3s var(--ease)}.reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn,.arr{transition:none}html{scroll-behavior:auto}}
+  .art{display:block;text-decoration:none;color:inherit;padding:1.75rem 0;border-top:1px solid var(--ink)}
+  .art:hover h2{text-decoration:underline;text-underline-offset:3px}
+  .filter{border-radius:999px;border:1.5px solid var(--ink);padding:8px 16px;font-weight:500;font-size:.85rem;cursor:pointer;background:transparent;transition:all .12s var(--ease);white-space:nowrap}
+  .filter.active{background:var(--ink);color:#fff}
+  .prose p{margin-bottom:1.1rem}.prose b{font-weight:700}
+  .demo-badge{position:fixed;bottom:16px;left:16px;z-index:60;background:var(--ink);color:var(--paper);border-radius:999px;padding:8px 16px;font-size:.8rem;font-weight:600;opacity:.85}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="assets/cms-config.js"></script>
+<script src="assets/cms.js"></script>
+</head>
+<body>
+
+<header class="sticky top-0 z-50 bg-white" style="border-bottom:1px solid var(--ink)">
+  <div class="mx-auto flex items-center justify-between px-5 md:px-10" style="max-width:1280px;height:72px">
+    <a href="index.html" class="logo-pill text-xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></a>
+    <nav class="hidden xl:flex items-center gap-6">
+      <a class="navlink" href="textalk-project-tilburg-weeft-verder.html">Tilburg Weeft Verder</a>
+      <a class="navlink" href="textalk-talkshows-overzicht.html">Talkshows</a>
+      <a class="navlink" href="textalk-expert-profiel.html">Experts</a>
+      <a class="navlink" style="border-bottom:2px solid var(--ink);padding-bottom:2px" href="nieuws.html">Nieuws</a>
+      <a class="navlink" href="over.html">Over ons</a>
+      <a class="navlink" href="partners.html">Partners</a>
+      <a class="btn btn-primary" href="agenda.html">Kom langs</a>
+    </nav>
+    <a class="btn btn-primary xl:hidden" href="agenda.html">Kom langs</a>
+  </div>
+</header>
+
+<main id="page">
+  <div class="mx-auto px-5 py-24 text-center" style="max-width:760px"><p class="meta font-semibold" style="color:var(--grey-text)">Laden…</p></div>
+</main>
+
+<footer style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-14 md:px-10" style="max-width:1280px">
+    <div class="flex flex-wrap items-baseline gap-4"><span class="logo-pill text-2xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></span><span class="serif-quote text-lg">de kledingindustrie als lens op de wereld</span></div>
+    <div class="mt-12 flex flex-wrap items-center justify-between gap-4 pt-6" style="border-top:1px solid rgba(255,255,255,.2)">
+      <p class="serif-quote text-lg">Onze redactie bepaalt de inhoud — nooit onze financiers.</p>
+      <p class="meta">Stichting Textalk · Tilburg · hallo@textalk.nl</p>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-badge">Nieuws · placeholderinhoud</div>
+
+<script>
+const esc=TextalkCMS.esc, md=TextalkCMS.mdToHtml;
+function fmtDate(d){const dt=new Date(d);if(isNaN(dt))return esc(d||'');return dt.toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});}
+
+function listView(items){
+  const tags=['Alles',...Array.from(new Set(items.map(i=>i.tag).filter(Boolean)))];
+  const filterBar=tags.map((t,i)=>`<button class="filter${i===0?' active':''}" data-f="${esc(t)}">${esc(t)}</button>`).join('');
+  const rows=items.map(n=>`
+    <a class="art reveal" href="nieuws.html?slug=${encodeURIComponent(n._slug)}" data-tag="${esc(n.tag||'')}">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="tag">${esc(n.tag||'Nieuws')}</span>
+        <span class="meta font-semibold" style="color:var(--grey-text)">${fmtDate(n.datum)}${n.auteur?' · '+esc(n.auteur):''}</span>
+      </div>
+      <h2 class="h2 mt-3" style="font-size:clamp(1.4rem,3vw,2rem)">${esc(n.title)}</h2>
+      ${n.intro?`<p class="mt-2 max-w-3xl" style="color:var(--grey-text)">${esc(n.intro)}</p>`:''}
+      <p class="meta mt-3 font-semibold">Lees verder →</p>
+    </a>`).join('');
+  return `
+    <section class="mx-auto px-5 py-14 md:px-10 md:py-16" style="max-width:1000px">
+      <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Journalistiek platform</p>
+      <h1 class="display mt-2">Wat er speelt in de<br>kledingindustrie</h1>
+      <p class="mt-6 max-w-2xl text-lg">Analyses, onderzoeksupdates en verhalen achter de schermen. Elke claim onderbouwd, elke bron herleidbaar — zo werken wij.</p>
+      <div class="mt-8 flex gap-2 overflow-x-auto" id="filters">${filterBar}</div>
+    </section>
+    <section class="hairline bg-white"><div class="mx-auto px-5 md:px-10 pb-16" style="max-width:1000px" id="rows">${rows}
+      <div class="border-t mt-4" style="border-color:var(--ink)"></div></div></section>`;
+}
+
+function articleView(n, prev){
+  const body = md(n.body||'');
+  return `
+    <article class="mx-auto px-5 py-12 md:px-10 md:py-16" style="max-width:760px">
+      <a class="meta font-semibold" href="nieuws.html">← Al het nieuws</a>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <span class="tag">${esc(n.tag||'Nieuws')}</span>
+        <span class="meta font-semibold" style="color:var(--grey-text)">${fmtDate(n.datum)}${n.auteur?' · '+esc(n.auteur):''}</span>
+      </div>
+      <h1 class="display mt-5" style="font-size:clamp(2rem,5vw,3.4rem)">${esc(n.title)}</h1>
+      ${n.intro?`<p class="serif mt-6" style="font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.3">${esc(n.intro)}</p>`:''}
+      <div class="prose mt-8 text-lg">${body||'<p style="color:var(--grey-text)">[Nog geen tekst. Vul dit artikel aan via /admin.]</p>'}</div>
+      <div class="mt-12 border-t pt-8" style="border-color:var(--ink)">
+        <a class="btn btn-secondary" href="nieuws.html">Meer nieuws <span class="arr">→</span></a>
+      </div>
+    </article>`;
+}
+function notFound(){return '<div class="mx-auto px-5 py-24 text-center" style="max-width:760px"><h1 class="h2">Artikel niet gevonden</h1><p class="mt-4" style="color:var(--grey-text)">Misschien is de link verouderd.</p><a class="btn btn-primary mt-8" href="nieuws.html">Al het nieuws →</a></div>';}
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.08});
+function observe(){document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}
+
+(async function(){
+  const page=document.getElementById('page');
+  const slug=new URLSearchParams(location.search).get('slug');
+  if(slug){
+    try{const n=await TextalkCMS.get('nieuws',slug);document.title=n.title+' — Textalk';page.innerHTML=articleView(n);}
+    catch(e){page.innerHTML=notFound();}
+    observe();return;
+  }
+  try{
+    let items=await TextalkCMS.list('nieuws');
+    items=items.filter(Boolean).sort((a,b)=>new Date(b.datum)-new Date(a.datum));
+    page.innerHTML=listView(items);
+    // filters
+    document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
+      document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+      const f=b.dataset.f;document.querySelectorAll('#rows .art').forEach(a=>{a.style.display=(f==='Alles'||a.dataset.tag===f)?'block':'none';});
+    }));
+  }catch(e){page.innerHTML='<div class="mx-auto px-5 py-24 text-center" style="max-width:760px"><p style="color:var(--grey-text)">Nieuws kon niet geladen worden.</p></div>';}
+  observe();
+})();
+</script>
+</body>
+</html>
