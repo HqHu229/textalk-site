@@ -90,16 +90,27 @@ vullen — via `/admin` of extern.
 ## Structuur
 
 ```
-index.html                              Home (pill-lens hero, primaire beeldtaal)
-show.html?slug=<slug>                    Showdetail (secundaire beeldtaal: themakleur + behandeling)
-textalk-talkshows-overzicht.html         Alle shows (primair, rustig grid)
-textalk-expert-profiel.html              Experts (overzicht + voorbeeldprofiel)
+index.html                                 Home (pill-lens hero, primaire beeldtaal)
+textalk-talkshows-overzicht.html           Alle shows (primair, rustig grid)
+show.html?slug=<slug>                      Showdetail (secundair: themakleur + behandeling)
+textalk-expert-profiel.html                Experts-overzicht (zoek + filter)
+expert.html?slug=<slug>                    Expertdetail
 textalk-project-tilburg-weeft-verder.html  Project (eigen sub-beeldtaal)
-admin/                                    Decap CMS
-assets/cms.js, cms-config.js             CMS-loader + repo-instellingen
-content/<collectie>/                      Markdown-content + manifest.json
-netlify.toml                              Publish-map + caching
+nieuws.html  /  nieuws.html?slug=<slug>    Nieuwslijst + artikel
+agenda.html                                Agenda (CMS-lijst)
+over.html                                  Over ons (missie, methode, team)
+partners.html                              Partners & financiers (gescheiden)
+404.html                                   Niet-gevonden-pagina (Netlify serveert 'm)
+admin/                                      Decap CMS
+assets/cms.js, cms-config.js, site-nav.js  CMS-loader, repo-instellingen, mobiele nav
+content/<collectie>/                        Markdown-content + manifest.json
+media/og.png                               Social-share-afbeelding (Open Graph)
+netlify.toml, robots.txt, sitemap.xml      Deploy + SEO
 ```
 
 De hero, de pill-lens en de motion-taal (harde cuts, mechanische easing) volgen
-Designsysteem V3.
+Designsysteem V3. Elke subpagina krijgt via `site-nav.js` een mobiel menu.
+
+> **Domein:** `robots.txt`, `sitemap.xml` en de `og:image`/`og:url`-tags gaan uit
+> van `https://textalk.nl/`. Draait de site op een ander domein, pas die dan aan.
+> Voor rijkere social-cards kun je `media/og.png` vervangen (1200×630).
