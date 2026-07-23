@@ -1,5 +1,5 @@
 ---
-naam: [Naam ambassadeur]
+naam: "[Naam ambassadeur]"
 rol: Ambassadeur
 type: Ambassadeur
 oneliner: "[One-liner.]"

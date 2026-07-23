@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expert — Textalk</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><rect x='6' y='30' width='88' height='40' rx='20' fill='none' stroke='black' stroke-width='6'/></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="assets/cms-config.js"></script>
+<script src="assets/cms.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#000;--paper:#fff;--grey-text:#595959;--accent:#FDED79;
+    --ease:cubic-bezier(.8,0,.18,1);
+    --font-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;--font-serif:"Instrument Serif",Georgia,serif;}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-sans);color:var(--ink);background:var(--paper);font-size:1.0625rem;line-height:1.55}
+  .display{font-weight:700;letter-spacing:-.02em;line-height:.94}
+  .h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.1;font-weight:700}
+  .h3{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.2;font-weight:700}
+  .meta{font-size:.875rem;line-height:1.4}
+  .serif{font-family:var(--font-serif)}.serif-quote{font-family:var(--font-serif);font-style:italic}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:14px 28px;font-weight:600;font-size:1rem;transition:transform .15s var(--ease),background .15s var(--ease),color .15s var(--ease);cursor:pointer;border:1.5px solid var(--ink);line-height:1;text-decoration:none}
+  .btn-primary{background:var(--ink);color:var(--paper)}.btn-primary:hover{transform:scale(1.03)}
+  .btn-secondary{background:transparent;color:var(--ink)}.btn-secondary:hover{background:var(--ink);color:var(--paper)}
+  .arr{display:inline-block;transition:transform .15s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .logo-pill{display:inline-flex;align-items:baseline;border:2.5px solid currentColor;border-radius:999px;padding:.28em .7em;line-height:1;text-decoration:none}
+  .logo-tex{font-weight:800;letter-spacing:-.02em}.logo-talk{font-family:var(--font-serif);font-weight:400}
+  .tag{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;border:1.5px solid var(--ink);padding:6px 14px;font-weight:500;font-size:.875rem;line-height:1;text-decoration:none;color:var(--ink)}
+  .tag:hover{background:var(--ink);color:#fff}
+  .navlink{font-weight:500}.navlink:hover{opacity:.6}
+  .hairline{border-top:1px solid var(--ink)}
+  .ph-people{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%, rgba(0,0,0,.14) 0 22%, transparent 23%),linear-gradient(0deg,rgba(0,0,0,.08),rgba(0,0,0,.08))}
+  .prose p{margin-bottom:1.1rem}.prose b{font-weight:700}
+  .demo-badge{position:fixed;bottom:16px;left:16px;z-index:60;background:var(--ink);color:var(--paper);border-radius:999px;padding:8px 16px;font-size:.8rem;font-weight:600;opacity:.85}
+</style>
+</head>
+<body>
+
+<header class="sticky top-0 z-50 bg-white" style="border-bottom:1px solid var(--ink)">
+  <div class="mx-auto flex items-center justify-between px-5 md:px-10" style="max-width:1280px;height:72px">
+    <a href="index.html" class="logo-pill text-xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></a>
+    <nav class="hidden xl:flex items-center gap-6">
+      <a class="navlink" href="textalk-project-tilburg-weeft-verder.html">Tilburg Weeft Verder</a>
+      <a class="navlink" href="textalk-talkshows-overzicht.html">Talkshows</a>
+      <a class="navlink" style="border-bottom:2px solid var(--ink);padding-bottom:2px" href="textalk-expert-profiel.html">Experts</a>
+      <a class="navlink" href="nieuws.html">Nieuws</a>
+      <a class="navlink" href="over.html">Over ons</a>
+      <a class="navlink" href="partners.html">Partners</a>
+      <a class="btn btn-primary" href="agenda.html">Kom langs</a>
+    </nav>
+    <a class="btn btn-primary xl:hidden" href="agenda.html">Kom langs</a>
+  </div>
+</header>
+
+<main id="page">
+  <div class="mx-auto px-5 py-24 text-center" style="max-width:760px"><p class="meta font-semibold" style="color:var(--grey-text)">Expert laden…</p></div>
+</main>
+
+<footer style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-14 md:px-10" style="max-width:1280px">
+    <div class="flex flex-wrap items-baseline gap-4"><span class="logo-pill text-2xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></span><span class="serif-quote text-lg">de kledingindustrie als lens op de wereld</span></div>
+    <div class="mt-12 flex flex-wrap items-center justify-between gap-4 pt-6" style="border-top:1px solid rgba(255,255,255,.2)">
+      <p class="serif-quote text-lg">Onze redactie bepaalt de inhoud — nooit onze financiers.</p>
+      <p class="meta">Stichting Textalk · Tilburg · hallo@textalk.nl</p>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-badge">Expert · placeholderinhoud</div>
+
+<script>
+(async function(){
+  const esc=TextalkCMS.esc, md=TextalkCMS.mdToHtml;
+  const slug=new URLSearchParams(location.search).get('slug');
+  const page=document.getElementById('page');
+  function notFound(){return '<div class="mx-auto px-5 py-24 text-center" style="max-width:760px"><h1 class="h2">Expert niet gevonden</h1><p class="mt-4" style="color:var(--grey-text)">Misschien is de link verouderd.</p><a class="btn btn-primary mt-8" href="textalk-expert-profiel.html">Alle experts →</a></div>';}
+  if(!slug){page.innerHTML=notFound();return;}
+  let e; try{ e=await TextalkCMS.get('experts',slug);}catch(err){page.innerHTML=notFound();return;}
+  document.title=(e.naam||'Expert')+' — Textalk';
+  const themas=(e.themas||'').split(',').map(t=>t.trim()).filter(Boolean);
+  page.innerHTML=`
+  <section class="mx-auto px-5 py-12 md:px-10 md:py-16" style="max-width:1280px">
+    <a class="meta font-semibold" href="textalk-expert-profiel.html">← Alle experts</a>
+    <div class="mt-8 grid gap-10 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <div class="relative overflow-hidden" style="aspect-ratio:4/5;background:var(--accent);border:1px solid var(--ink)">
+          ${e.portret?`<img src="${esc(e.portret)}" alt="${esc(e.naam)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">`:'<div class="ph-people"></div>'}
+        </div>
+        ${(e.website||e.linkedin)?`<div class="mt-5 flex flex-wrap gap-2">
+          ${e.website?`<a class="tag" href="${esc(e.website)}" target="_blank" rel="noopener">Website ↗</a>`:''}
+          ${e.linkedin?`<a class="tag" href="${esc(e.linkedin)}" target="_blank" rel="noopener">LinkedIn ↗</a>`:''}
+        </div>`:''}
+      </div>
+      <div class="md:col-span-8">
+        ${e.rol?`<p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">${esc(e.rol)}</p>`:''}
+        <h1 class="display mt-2" style="font-size:clamp(2rem,4.5vw,3.2rem)">${esc(e.naam)}</h1>
+        ${e.citaat?`<p class="serif-quote mt-4 text-xl" style="color:var(--grey-text)">"${esc(e.citaat)}"</p>`:''}
+        ${e.oneliner?`<p class="mt-4 text-lg font-medium">${esc(e.oneliner)}</p>`:''}
+        <div class="prose mt-6 text-lg">${md(e.bio||'')||'<p style="color:var(--grey-text)">[Nog geen bio. Vul aan via /admin.]</p>'}</div>
+        ${themas.length?`<div class="mt-8"><p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Thema's</p>
+          <div class="mt-3 flex flex-wrap gap-2">${themas.map(t=>`<span class="tag" style="cursor:default">${esc(t)}</span>`).join('')}</div></div>`:''}
+        ${e.show?`<div class="mt-8"><p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Te gast bij</p>
+          <div class="mt-3"><a class="tag" href="textalk-talkshows-overzicht.html"><span class="w-4 h-4 rounded-full" style="background:var(--accent)"></span>${esc(e.show)} →</a></div></div>`:''}
+        <div class="mt-10 p-6 flex flex-wrap items-center justify-between gap-4" style="background:var(--ink);color:#fff">
+          <div><p class="h3">Deze expert spreken?</p><p class="meta text-white/70 mt-1">${e.contact_ok?'Voor pers, onderzoek of een evenement — we brengen je in contact.':'We brengen je graag in contact, met toestemming van de expert.'}</p></div>
+          <a class="btn" style="background:#fff;color:#000;border-color:#fff" href="mailto:hallo@textalk.nl?subject=${encodeURIComponent('Contact met '+(e.naam||'expert'))}">Neem contact op <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>`;
+})();
+</script>
+  <script src="assets/site-nav.js"></script>
+</body>
+</html>

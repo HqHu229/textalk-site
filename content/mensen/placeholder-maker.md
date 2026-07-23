@@ -1,5 +1,5 @@
 ---
-naam: [Naam maker]
+naam: "[Naam maker]"
 rol: Maker & redactie
 type: Team
 oneliner: "[One-liner.]"

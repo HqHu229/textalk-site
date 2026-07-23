@@ -1,5 +1,5 @@
 ---
-title: [Titel community-meetup]
+title: "[Titel community-meetup]"
 datum: 2026-09-15
 locatie: Tilburg
 type: Meetup

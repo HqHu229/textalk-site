@@ -1,6 +1,6 @@
 ---
-naam: [Naam expert 2]
-rol: [Rol / expertise]
+naam: "[Naam expert 2]"
+rol: "[Rol / expertise]"
 themas: Cultuur
 oneliner: "[One-liner — max ~12 woorden.]"
 bio: >-

@@ -1,5 +1,5 @@
 ---
-title: [Titel volgende live show]
+title: "[Titel volgende live show]"
 datum: 2026-11-01
 locatie: Schouwburg Concertzaal Tilburg
 type: Live show

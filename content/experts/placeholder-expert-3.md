@@ -1,6 +1,6 @@
 ---
-naam: [Naam expert 3]
-rol: [Rol / expertise]
+naam: "[Naam expert 3]"
+rol: "[Rol / expertise]"
 themas: Circulariteit
 oneliner: "[One-liner — max ~12 woorden.]"
 bio: >-

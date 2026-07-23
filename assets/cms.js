@@ -176,7 +176,7 @@ window.TextalkCMS = (function () {
   function newsTile(n) {
     const d = n.datum ? new Date(n.datum) : null;
     const dstr = d && !isNaN(d) ? d.toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" }) : esc(n.datum || "");
-    return '<a class="card flex flex-col justify-between gap-6 p-6" style="border:1px solid var(--ink)" href="#">' +
+    return '<a class="card flex flex-col justify-between gap-6 p-6" style="border:1px solid var(--ink)" href="nieuws.html?slug=' + encodeURIComponent(n._slug) + '">' +
       '<div><span class="tag" style="border-width:1px;font-size:.75rem;padding:4px 12px">' + esc(n.tag || "Nieuws") + '</span>' +
       '<h3 class="h3 mt-4">' + esc(n.title) + '</h3></div>' +
       '<p class="meta font-semibold">' + dstr + ' · Lees verder →</p></a>';
@@ -184,7 +184,7 @@ window.TextalkCMS = (function () {
 
   function expertTile(e) {
     const kleur = e.kleur || "#FDED79";
-    return '<a class="ecard" href="#" data-th="' + esc(e.themas || "") + '" data-n="' + esc((e.naam + " " + (e.rol || "")).toLowerCase()) + '">' +
+    return '<a class="ecard" href="expert.html?slug=' + encodeURIComponent(e._slug) + '" data-th="' + esc(e.themas || "") + '" data-n="' + esc((e.naam + " " + (e.rol || "")).toLowerCase()) + '">' +
       '<div class="media relative aspect-[4/5] overflow-hidden" style="background:' + esc(kleur) + ';border:1px solid var(--ink)">' +
       (e.portret ? '<img src="' + esc(e.portret) + '" alt="' + esc(e.naam) + '" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">' : '<div class="ph-people"></div>') +
       '</div>' +

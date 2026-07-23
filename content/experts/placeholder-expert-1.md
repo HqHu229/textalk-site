@@ -1,6 +1,6 @@
 ---
-naam: [Naam expert 1]
-rol: [Rol / expertise]
+naam: "[Naam expert 1]"
+rol: "[Rol / expertise]"
 themas: Chemie
 oneliner: "[One-liner — max ~12 woorden.]"
 bio: >-
