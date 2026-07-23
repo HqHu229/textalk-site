@@ -1,0 +1,20 @@
+# Textalk — Netlify configuratie
+# De site is een no-build statische site (HTML/CSS/JS). Er is geen buildstap.
+# De hele site staat in de repo-root, dus de publish-map is "." (de root).
+
+[build]
+  publish = "."
+  command = ""
+
+# Decap CMS (in /admin) logt in via Netlify Identity + Git Gateway.
+# Die twee zet je AAN in het Netlify-dashboard:
+#   Site settings → Identity → Enable Identity
+#   Identity → Services → Git Gateway → Enable
+# Daarna kun je op /admin inloggen en content bewerken; wijzigingen
+# worden als commits naar deze repo geschreven.
+
+# Lichte caching voor statische assets (optioneel, veilig).
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
