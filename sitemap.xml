@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pas de domeinnaam aan als de site niet op https://textalk.nl/ draait. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://textalk.nl/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://textalk.nl/textalk-talkshows-overzicht.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://textalk.nl/textalk-project-tilburg-weeft-verder.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://textalk.nl/textalk-expert-profiel.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://textalk.nl/nieuws.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://textalk.nl/agenda.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://textalk.nl/over.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://textalk.nl/partners.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
